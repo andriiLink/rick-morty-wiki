@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rick & Morty Multiverse Explorer
 
-## Getting Started
+A modern, high-performance web application for exploring the **Rick & Morty** universe. Built with Next.js 15 (App Router), this project demonstrates advanced data fetching techniques, clean UI/UX, and a fully type-safe architecture.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Experience the multiverse here:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Demo: [https://rick-morty-wiki-beige-six.vercel.app/]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Server-Side Rendering (SSR):** Lightning-fast initial page loads and superior SEO.
 
-## Learn More
+* **Advanced Search & Filter:** Instant results with state-in-URL synchronization (perfect for sharing links).
 
-To learn more about Next.js, take a look at the following resources:
+* **Character Insights:** Detailed pages for every character, location, and episode.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Seamless UX:** Uses React Suspense and custom Skeleton Screens to eliminate layout shift during loading.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Responsive Design:** Mobile-first approach using Tailwind CSS for a flawless experience on any device.
 
-## Deploy on Vercel
+* **Themed 404 Pages:** Custom error handling inspired by the show's multiverse aesthetic.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Framework** - Next.js 15 (App Router)
+
+* **Language** - TypeScript
+
+* **Styling** - Tailwind CSS
+
+* **Data Fetching** - Native Fetch API (Server Components)
+
+* **API** - Rick and Morty API
+
+
+## Project Structure
+
+├── app/                  # Next.js App Router (Pages & Layouts)
+│   ├── (root)/           # Main character explorer grid
+│   ├── characters/       # Individual character profile routes
+│   ├── locations/        # Global locations index
+│   ├── episodes/         # Episodes list & details
+│   └── layout.tsx        # Global SEO, Fonts, and Navbar
+├── src/
+│   ├── components/       # Reusable UI (Cards, Filters, Skeletons)
+│   ├── constants/        # Contsants (Navigation Items)
+│   ├── lib/              # API wrapper and helper functions
+│   └── types/            # Centralized TypeScript definitions
+└── public/               # Static assets & custom Favicon
+
+
+## Setup & Installation
+
+**Follow these steps to run the project on your machine:**
+
+Clone the repository:
+
+``` git clone [https://github.com/your-username/rick-morty-nextjs.git](https://github.com/your-username/rick-morty-nextjs.git)
+cd rick-morty-nextjs ```
+
+
+Install dependencies:
+
+``` npm install ```
+
+
+Launch development server:
+
+``` npm run dev ```
+
+
+Production Build:
+
+``` npm run build ```
+
+
+## Design Philosophy
+
+Typography: We use Montserrat for bold, scientific-style headings and Inter for clean, readable body text.
+
+Feedback: Interactive elements use subtle scale transformations and smooth transitions to feel premium.
+
+## Contact & Connect
+
+**Andrii Linkevych**
+
+Developed with passion for the Rick & Morty community 🥒
