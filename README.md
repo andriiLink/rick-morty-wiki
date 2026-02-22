@@ -4,8 +4,6 @@ A modern, high-performance web application for exploring the **Rick & Morty** un
 
 ## Live Demo
 
-Experience the multiverse here:
-
 Demo: [https://rick-morty-wiki-beige-six.vercel.app/]
 
 ## Key Features
@@ -37,6 +35,7 @@ Demo: [https://rick-morty-wiki-beige-six.vercel.app/]
 
 ## Project Structure
 
+```bash
 ├── app/                  # Next.js App Router (Pages & Layouts)
 │   ├── (root)/           # Main character explorer grid
 │   ├── characters/       # Individual character profile routes
@@ -49,7 +48,7 @@ Demo: [https://rick-morty-wiki-beige-six.vercel.app/]
 │   ├── lib/              # API wrapper and helper functions
 │   └── types/            # Centralized TypeScript definitions
 └── public/               # Static assets & custom Favicon
-
+```
 
 ## Setup & Installation
 
