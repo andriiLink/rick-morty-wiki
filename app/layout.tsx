@@ -35,11 +35,25 @@ export default function RootLayout({
           <NavBar />
         </header>
 
-        <main>
+        <main className="flex flex-grow justify-center">
           {children}
         </main>
 
-        <footer>My project 2026</footer>
+        <footer 
+          className="
+            h-20 bg-blue-500 
+            flex flex-col
+            justify-center items-center 
+            text-white
+          ">
+            <div>
+              My project 2026
+            </div>
+
+            <div className="font-semibold hover:-translate-y-1">
+              <Link href={'https://github.com/andriiLink/rick-morty'}>{'>>>'}GitHub repository{'<<<'}</Link>
+            </div>
+          </footer>
       </body>
     </html>
   );

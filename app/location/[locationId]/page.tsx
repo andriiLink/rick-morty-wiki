@@ -33,11 +33,18 @@ const LocationPage = async ({ params }: {params: Promise<{ locationId: string }>
         <p className='pb-4 flex justify-center'>Type: {selectedLocation.type}</p>
       </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6'>
+      <div 
+        className='
+          grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 
+          gap-6
+          m-auto
+        '>
         {
           locationResidents.map((resident) => {
             return (
-              <CharacterCard key={resident.id} chatacter={resident}/>
+              <div className='hover:-translate-y-2'>
+                <CharacterCard key={resident.id} chatacter={resident}/>
+              </div>
             );
           })
         }
