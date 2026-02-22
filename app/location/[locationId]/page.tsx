@@ -42,8 +42,8 @@ const LocationPage = async ({ params }: {params: Promise<{ locationId: string }>
         {
           locationResidents.map((resident) => {
             return (
-              <div className='hover:-translate-y-2'>
-                <CharacterCard key={resident.id} chatacter={resident}/>
+              <div key={resident.id} className='hover:-translate-y-2'>
+                <CharacterCard chatacter={resident}/>
               </div>
             );
           })
