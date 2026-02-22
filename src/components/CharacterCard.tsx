@@ -26,14 +26,14 @@ const CharacterCard: React.FC<Props> = ({ chatacter }) => {
         {chatacter.status}
       </div>
 
-      <div className='text-xl font-bold mb-3'>
+      <div className='text-xl font-bold mb-3 ml-2'>
         {chatacter.name}
       </div>
 
-      <div>
+      <div className='ml-2'>
         Last Location:
       </div>
-      <div className='text-lg font-medium mb-2'>
+      <div className='text-lg font-medium mb-2 ml-2'>
         {chatacter.location.name}
       </div>
     </div>
