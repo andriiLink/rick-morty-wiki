@@ -45,8 +45,8 @@ const EpisodePage = async ({ params }: {params: Promise<{ episodeId: string }>})
           episodeCharacters.length > 0 ? (
             episodeCharacters.map((character) => {
               return (
-                <div className='hover:-translate-y-2'>
-                  <CharacterCard key={character.id} chatacter={character}/>
+                <div key={character.id} className='hover:-translate-y-2'>
+                  <CharacterCard chatacter={character}/>
                 </div>
               );
             })

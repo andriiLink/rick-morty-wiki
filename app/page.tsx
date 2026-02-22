@@ -5,6 +5,7 @@ import CharacterCard from '@/src/components/CharacterCard';
 import { SearchInput } from '@/src/components/SearchInput';
 import { FilterBar } from '@/src/components/FilterBar';
 import { PaginationBar } from '@/src/components/PaginationBar';
+import SkeletonCharacterCard from '@/src/components/SkeletonCharacterCard';
 
 export default async function Home({ 
   searchParams 

@@ -35,7 +35,7 @@ export const FilterBar = () => {
   const hasFilters = Array.from(searchParams.keys()).some(key => key !== 'page');
 
   return (
-    <section className='w-full'>
+    <section className='w-90'>
       <div>
         <p className={`font-bold flex justify-center mb-2 ${
           !hasFilters && 'mb-16'}
@@ -61,6 +61,7 @@ export const FilterBar = () => {
             <div key={category.id}>
               <div
                 className='p-3 bg-blue-200 rounded-xl
+                  font-semibold
                   hover:cursor-pointer
                 '
                 onClick={() => setSelectedCategory(category.id)}
