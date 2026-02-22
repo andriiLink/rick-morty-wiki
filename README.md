@@ -57,23 +57,31 @@ Demo: [https://rick-morty-wiki-beige-six.vercel.app/]
 
 Clone the repository:
 
-``` git clone [https://github.com/your-username/rick-morty-nextjs.git](https://github.com/your-username/rick-morty-nextjs.git)
-cd rick-morty-nextjs ```
+```bash 
+git clone [https://github.com/your-username/rick-morty-nextjs.git](https://github.com/your-username/rick-morty-nextjs.git)
+cd rick-morty-nextjs 
+```
 
 
 Install dependencies:
 
-``` npm install ```
+```bash 
+npm install 
+```
 
 
 Launch development server:
 
-``` npm run dev ```
+```bash
+npm run dev
+```
 
 
 Production Build:
 
-``` npm run build ```
+```bash 
+npm run build 
+```
 
 
 ## Design Philosophy
