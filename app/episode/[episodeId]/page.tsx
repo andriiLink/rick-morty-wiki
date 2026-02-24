@@ -49,7 +49,7 @@ const EpisodePage = async ({ params }: {params: Promise<{ episodeId: string }>})
               );
             })
           ) : (
-            <div>Characters wasn't found!</div>
+            <div>Characters was not found!</div>
           )
         }
       </div>

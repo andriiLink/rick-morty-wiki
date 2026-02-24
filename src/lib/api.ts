@@ -46,12 +46,12 @@ export async function getCharacters(
   return fetchData<APIResponseType<CharacterType>>(characterEndpoint);
 };
 
-export async function getEpisodes(page = 1): Promise<EpisodeType[] | null> {
+export async function getEpisodes(): Promise<EpisodeType[] | null> {
   let allEpisodes: EpisodeType[] = [];
   let currentPage: number | null = 1;
 
   while (currentPage !== null) {
-    let apiResponse = await fetchData<APIResponseType<EpisodeType>>(`episode/?page=${currentPage}`);
+    const apiResponse = await fetchData<APIResponseType<EpisodeType>>(`episode/?page=${currentPage}`);
 
     if (apiResponse && apiResponse.results) {
       allEpisodes = [...allEpisodes, ...apiResponse.results];
@@ -69,12 +69,12 @@ export async function getEpisodes(page = 1): Promise<EpisodeType[] | null> {
   return allEpisodes.length > 0 ? allEpisodes : null;
 };
 
-export async function getLocations(page = 1): Promise<LocationType[] | null> {
+export async function getLocations(): Promise<LocationType[] | null> {
   let allLocation: LocationType[] = [];
   let currentPage: number | null = 1;
 
   while (currentPage !== null) {
-    let apiResponse = await fetchData<APIResponseType<LocationType>>(`location/?page=${currentPage}`);
+    const apiResponse = await fetchData<APIResponseType<LocationType>>(`location/?page=${currentPage}`);
 
     if (apiResponse && apiResponse.results) {
       allLocation = [...allLocation, ...apiResponse.results];
