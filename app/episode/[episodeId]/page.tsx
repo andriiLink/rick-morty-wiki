@@ -20,8 +20,6 @@ const EpisodePage = async ({ params }: {params: Promise<{ episodeId: string }>})
     );
   }
 
-  console.log(selectedEpisode.characters);
-
   return (
     <section>
       <div className='sticky top-4 bg-white py-5'>
