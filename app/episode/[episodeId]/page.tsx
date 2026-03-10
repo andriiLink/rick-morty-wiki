@@ -1,17 +1,18 @@
 import CharacterCard from '@/src/components/CharacterCard';
 
 import { getEpisodeInfo, getMultipleCharactersByIds } from '@/src/lib/api';
+import Link from 'next/link';
 
-const EpisodePage = async ({ params }: {params: Promise<{ episodeId: string }>}) => {
+const EpisodePage = async ({ params }: { params: Promise<{ episodeId: string }> }) => {
   const { episodeId } = await params;
-  const selectedEpisode =  await getEpisodeInfo(Number(episodeId));
+  const selectedEpisode = await getEpisodeInfo(Number(episodeId));
 
   const characterIds = selectedEpisode?.characters
     .map((link) => link.split('/').pop()) || [];
 
   const charactersData = await getMultipleCharactersByIds(characterIds.join(','));
   const episodeCharacters = charactersData ? (
-    Array.isArray(charactersData) ? charactersData: [charactersData]
+    Array.isArray(charactersData) ? charactersData : [charactersData]
   ) : [];
 
   if (!selectedEpisode) {
@@ -37,15 +38,19 @@ const EpisodePage = async ({ params }: {params: Promise<{ episodeId: string }>})
           Air Date: {selectedEpisode.air_date}
         </div>
       </div>
- 
+
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6 m-auto'>
         {
           episodeCharacters.length > 0 ? (
             episodeCharacters.map((character) => {
               return (
-                <div key={character.id} className='hover:-translate-y-2'>
-                  <CharacterCard chatacter={character}/>
-                </div>
+                <Link
+                  key={character.id}
+                  className='hover:-translate-y-2'
+                  href={`/characters/${character.id}`}
+                >
+                  <CharacterCard character={character} />
+                </Link>
               );
             })
           ) : (

@@ -26,29 +26,29 @@ export default async function Home({
         <SearchInput labelText='Characters' />
       </div>
 
-      <div className='flex flex-col md:flex-row'>
-        <aside className='w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 px-8 py-4'>
+      <div className='flex flex-col md:flex-row items-start space-x-15'>
+        <aside className='w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 shrink-0 px-8 py-4'>
           <FilterBar />
         </aside>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4
-          gap-5 m-auto
+          gap-5 mx-auto
         '>
           {
             charactersFromAPI ? (
-              charactersFromAPI.results.map((chatacter) => {
+              charactersFromAPI.results.map((character) => {
                 return (
                   <Link
-                    key={chatacter.id}
+                    key={character.id}
                     className='hover:-translate-y-2'
-                    href={`/characters/${chatacter.id}`}
+                    href={`/characters/${character.id}`}
                   >
-                    <CharacterCard chatacter={chatacter} />
+                    <CharacterCard character={character} />
                   </Link>
                 );
               })
             ) : (
-              <div>No characters with name <b>{name}</b> was found :/</div>
+              <div className='w-full'>No characters with name <b>{name}</b> was found :/</div>
             )
           }
         </div>

@@ -1,7 +1,8 @@
 import { getLocationInfo, getMultipleCharactersByIds } from '@/src/lib/api';
 import CharacterCard from '@/src/components/CharacterCard';
+import Link from 'next/link';
 
-const LocationPage = async ({ params }: {params: Promise<{ locationId: string }>}) => {
+const LocationPage = async ({ params }: { params: Promise<{ locationId: string }> }) => {
   const { locationId } = await params;
   const selectedLocation = await getLocationInfo(Number(locationId));
 
@@ -21,7 +22,7 @@ const LocationPage = async ({ params }: {params: Promise<{ locationId: string }>
 
   return (
     <section>
-      <div className='sticky top-4 bg-white py-4'>
+      <div className='sticky top-4 bg-white py-4 z-1'>
         <h2 className='
           md: flex flex-row
           text-3xl
@@ -33,7 +34,7 @@ const LocationPage = async ({ params }: {params: Promise<{ locationId: string }>
         <p className='pb-4 flex justify-center'>Type: {selectedLocation.type}</p>
       </div>
 
-      <div 
+      <div
         className='
           grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 
           gap-6
@@ -42,9 +43,13 @@ const LocationPage = async ({ params }: {params: Promise<{ locationId: string }>
         {
           locationResidents.map((resident) => {
             return (
-              <div key={resident.id} className='hover:-translate-y-2'>
-                <CharacterCard chatacter={resident}/>
-              </div>
+              <Link
+                key={resident.id}
+                className='hover:-translate-y-2'
+                href={`/characters/${resident.id}`}
+              >
+                <CharacterCard character={resident} />
+              </Link>
             );
           })
         }

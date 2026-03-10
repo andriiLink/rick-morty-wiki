@@ -57,11 +57,12 @@ export const PaginationBar: React.FC<Props> = ({ totalPages }) => {
                 hover:cursor-pointer
               '
                 onClick={() => handleChangePage(currentPage - 1)}>{'<'}</div>
+
               {
-                getVisiblePages().map((page) => {
+                getVisiblePages().map((page, index) => {
                   return (
                     <div 
-                      key={page} 
+                      key={`${page}-${index}`} 
                       className={`h-10 w-10
                     ${page !== '...' 
                       && 'border-blue-500 border-4 rounded-md hover:cursor-pointer' 
@@ -69,10 +70,12 @@ export const PaginationBar: React.FC<Props> = ({ totalPages }) => {
                     text-lg
                     text-blue-500
                     flex items-center justify-center
-                  `}>{page}</div>
+                    `}
+                    onClick={() => handleChangePage(+page)}>{page}</div>
                   );
                 })
               }
+
               <div
                 className='bg-blue-500 w-10 h-10
                 text-white

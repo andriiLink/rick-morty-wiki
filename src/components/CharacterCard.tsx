@@ -3,11 +3,11 @@ import Image from 'next/image';
 import { CharacterType } from '@/src/types/CharacterType';
 
 type Props = {
-  chatacter: CharacterType,
+  character: CharacterType,
 };
 
-const CharacterCard: React.FC<Props> = ({ chatacter }) => {
-  const altValue = chatacter.name + ' image';
+const CharacterCard: React.FC<Props> = ({ character }) => {
+  const altValue = character.name + ' image';
   const statusStyles = {
     Alive: 'bg-green-500',
     Dead: 'bg-red-500',
@@ -18,23 +18,23 @@ const CharacterCard: React.FC<Props> = ({ chatacter }) => {
     <div className='w-60 border-4 border-blue-500 rounded-2xl object-cover overflow-hidden'>
       <Image 
         className='max-w-full h-auto rounded-t-xl'
-        src={chatacter.image} alt={altValue}
+        src={character.image} alt={altValue}
         height={250}
         width={250}
       />
-      <div className={`${statusStyles[chatacter.status]} flex justify-center text-white font-bold mb-2`}>
-        {chatacter.status}
+      <div className={`${statusStyles[character.status]} flex justify-center text-white font-bold mb-2`}>
+        {character.status}
       </div>
 
       <div className='text-xl font-bold mb-3 ml-2'>
-        {chatacter.name}
+        {character.name}
       </div>
 
       <div className='ml-2'>
         Last Location:
       </div>
       <div className='text-lg font-medium mb-2 ml-2'>
-        {chatacter.location.name}
+        {character.location.name}
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ const LocationLayout = async ({ children }: Readonly<{ children: React.ReactNode
           itemList={locaitonList}
           routerDirection='location'
           paramName='locationId'
-          label='select location'
+          label='Select the location...'
         />
       </aside>
 
