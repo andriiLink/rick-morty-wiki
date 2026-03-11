@@ -38,7 +38,6 @@ const EpisodePage = async ({ params }: { params: Promise<{ episodeId: string }> 
           Air Date: {selectedEpisode.air_date}
         </div>
       </div>
-
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6 m-auto'>
         {
           episodeCharacters.length > 0 ? (

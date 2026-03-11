@@ -12,7 +12,6 @@ export const PaginationBar: React.FC<Props> = ({ totalPages }) => {
   const router = useRouter();
 
   const currentPage = Number(searchParams.get('page')) || 1;
-  // const pagesArray = Array.from({ length: totalPages || 0 }, (_, i) => i + 1);
 
   const handleChangePage = (pageNumber: number) => {
     const param = new URLSearchParams(searchParams.toString());

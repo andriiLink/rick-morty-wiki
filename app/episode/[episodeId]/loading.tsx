@@ -2,7 +2,6 @@ import SkeletonCharacterCard from "@/src/components/SkeletonCharacterCard";
 
 export default function Loading() {
   const skeletonArray = Array.from({ length: 8 });
-
   return (
     <div 
       className="
