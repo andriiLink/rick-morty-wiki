@@ -22,7 +22,7 @@ const LocationPage = async ({ params }: { params: Promise<{ locationId: string }
 
   return (
     <section>
-      <div className='sticky top-4 bg-white py-4 z-1'>
+      <div className='sticky top-50 md:top-20 bg-white py-4 z-1'>
         <h2 className='
           md: flex flex-row
           text-3xl

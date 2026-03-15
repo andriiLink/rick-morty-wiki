@@ -23,7 +23,7 @@ const EpisodePage = async ({ params }: { params: Promise<{ episodeId: string }> 
 
   return (
     <section>
-      <div className='sticky top-4 bg-white py-5 z-1'>
+      <div className='sticky top-50 md:top-18 bg-white py-5 z-1'>
         <h2 className='
           flex flex-row
           text-3xl

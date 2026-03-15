@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <header className="bg-blue-500 flex justify-between items-center">
+        <header className="sticky top-0 z-10 bg-blue-500 flex justify-between items-center">
           <Link href={'/'} className="text-white text-3xl font-bold mx-5">🥒Rick & Morty Wiki</Link>
           <NavBar />
         </header>

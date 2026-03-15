@@ -48,7 +48,12 @@ export default async function Home({
                 );
               })
             ) : (
-              <div className='col-span-1 sm:col-span-2 md:col-span-3 2xl:col-span-4 text-center py-20'>No characters with name <b>{name}</b> was found :/</div>
+              <div className='
+                col-span-1 
+                sm:col-span-2 md:col-span-3 2xl:col-span-4 
+                text-center 
+                py-20
+              '>No characters with name <b>{name}</b> was found :/</div>
             )
           }
         </div>
