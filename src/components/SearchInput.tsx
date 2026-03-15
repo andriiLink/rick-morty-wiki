@@ -31,6 +31,7 @@ export const SearchInput: React.FC<Params> = ({ labelText }) => {
       <label className="text-5xl font-semibold">{labelText}</label>
       <div className="flex flex-row justify-between w-full gap-4">
         <input
+          key={searchParams.get('name') ?? 'empty'}
           placeholder="Search for characters"
           onChange={(e) => { handleSearch(e.target.value) }}
           defaultValue={searchParams.get('name') ?? undefined}

@@ -35,7 +35,7 @@ export const FilterBar = () => {
   const hasFilters = Array.from(searchParams.keys()).some(key => key !== 'page');
 
   return (
-    <section className='w-90'>
+    <section className='w-90 flex flex-col justify-self-center'>
       <div>
         <p className={`font-bold flex justify-center mb-2 ${
           !hasFilters && 'mb-16'}
