@@ -40,16 +40,17 @@ export const ItemSelectorDropdown = <T extends BaseItem>({
     router.push(`/${routerDirection}/${value.id}`);
   };
 
-
   return (
     <div>
-      <div className='text-gray-600 text-lg font-bold md:mt-35 mb-3'>{label}</div>
+      <div className='text-gray-600 text-lg font-bold md:mx-auto lg:mt-35 mb-3'>{label}</div>
       <div className='
         border-4 border-blue-500 w-full rounded-xl shrink-0 
+        relative
       '>
         <Listbox value={selectedItem} onChange={handleChangeEpisode}>
           <ListboxButton
             className='
+              relative
               w-full py-2 px-4
               focus:outline-none
               focus:shadow-lg
@@ -59,6 +60,10 @@ export const ItemSelectorDropdown = <T extends BaseItem>({
             {selectedItem ? selectedItem.name : label}
           </ListboxButton>
           <ListboxOptions className='
+            absolute
+            z-100
+            w-full
+            bg-white
             border-blue-500
             focus: outline-none
             max-h-60

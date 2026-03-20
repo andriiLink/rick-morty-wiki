@@ -38,14 +38,14 @@ const EpisodePage = async ({ params }: { params: Promise<{ episodeId: string }> 
           Air Date: {selectedEpisode.air_date}
         </div>
       </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6 m-auto'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6'>
         {
           episodeCharacters.length > 0 ? (
             episodeCharacters.map((character) => {
               return (
                 <Link
                   key={character.id}
-                  className='hover:-translate-y-2'
+                  className='flex justify-center hover:-translate-y-2'
                   href={`/characters/${character.id}`}
                 >
                   <CharacterCard character={character} />

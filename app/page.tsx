@@ -27,7 +27,7 @@ export default async function Home({
       </div>
 
       <div className='flex flex-col xl:flex-row items-start space-x-15'>
-        <aside className='w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 shrink-0 px-8 py-4 sm:m-auto xl:m-0'>
+        <aside className='w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 shrink-0 px-8 py-4 sm:mx-auto xl:mx-0'>
           <FilterBar />
         </aside>
 
