@@ -45,7 +45,7 @@ const LocationPage = async ({ params }: { params: Promise<{ locationId: string }
             return (
               <Link
                 key={resident.id}
-                className='hover:-translate-y-2'
+                className='flex justify-center hover:-translate-y-2'
                 href={`/characters/${resident.id}`}
               >
                 <CharacterCard character={resident} />
