@@ -26,8 +26,8 @@ export default async function Home({
         <SearchInput labelText='Characters' />
       </div>
 
-      <div className='flex flex-col md:flex-row items-start space-x-15'>
-        <aside className='w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 shrink-0 px-8 py-4'>
+      <div className='flex flex-col xl:flex-row items-start space-x-15'>
+        <aside className='w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 shrink-0 px-8 py-4 sm:m-auto xl:m-0'>
           <FilterBar />
         </aside>
 
